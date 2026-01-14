@@ -1,71 +1,134 @@
-# cognitive-trace-recorder README
+## Cognitive Trace Recorder – VS Code Extension
 
-This is the README for your extension "cognitive-trace-recorder". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Cognitive Trace Recorder is a VS Code extension that records how developers think while coding, not just the code they write.
+It captures cognitive traces such as pauses, file revisits, added and deleted comments, and thought evolution — helping developers understand their decision-making process during software development.
 
 ---
 
-## Following extension guidelines
+## What Are Cognitive Traces in Programming?
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+In programming, developers constantly make mental decisions:
+1. pausing before writing logic
+2. opening the same file repeatedly
+3. writing a comment, then deleting it
+4. revising an idea mid-sentence
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+These actions represent developer cognition, but traditional tools like Git only track final output.
+A cognitive trace is a record of these invisible thinking signals.
+This VS Code extension makes them visible.
 
-## Working with Markdown
+---
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+##  Features
+## File Activity Tracking
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+Tracks file open and revisit patterns
+→ identifies confusion points and focus areas in codebases
 
-## For more information
+## Hesitation Detection
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+Detects pauses in typing
+→ signals uncertainty, planning, or problem-solving moments
 
-**Enjoy!**
+## Comment Tracking
+
+Logs when comments are added
+→ captures explicit developer intent
+
+## Deleted Comment Detection
+
+Logs removed comments
+→ records abandoned or reconsidered ideas
+
+## Thought Evolution (Raw Mode)
+
+Tracks how a line evolves (h → he → hel)
+→ captures micro-level thought formation
+
+---
+
+## Privacy-First Design
+
+- No internet access
+- No cloud storage
+- No telemetry
+- Local-only data storage
+
+All data is stored locally using the VS Code extension storage system.
+
+---
+
+ ## Example Output
+
+```bash
+{
+  "type": "deleted_comment",
+  "comment": "// this might break authentication"
+}
+```
+
+This helps answer:
+
+- Why did I hesitate here?
+- What idea did I abandon?
+- Which files cause the most cognitive load?
+
+---
+
+## Why This Project Exists
+
+Most developer tools focus on:
+
+- code output
+- performance
+- correctness
+
+Very few tools focus on:
+
+- developer thinking
+- hesitation
+- uncertainty
+- decision-making
+
+Cognitive Trace Recorder treats programming as a cognitive activity, not just text editing.
+
+---
+
+## Who Should Use This?
+
+- Software developers
+- Programming students
+- Engineers doing retrospectives
+
+Anyone curious about developer behavior and cognition
+
+---
+
+## Project Status
+
+Early-stage MVP focused on cognitive data collection.
+
+Planned improvements:
+
+- Session-based timelines
+- Thinking map visualization
+- Cognitive hotspot detection
+- Noise reduction modes
+- Git commit context linking
+
+---
+
+## Tech Stack
+
+- TypeScript
+- VS Code Extension API
+- Node.js
+- Local JSON storage
+
+---
+
+## Author
+
+Jatin
+
+If this project interests you, ⭐ star the repository.

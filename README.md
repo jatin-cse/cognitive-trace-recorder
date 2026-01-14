@@ -5,13 +5,24 @@ It captures cognitive traces such as pauses, file revisits, added and deleted co
 
 ---
 
+## Original Idea Notice
+
+Cognitive Trace Recorder explores the idea of recording
+developer cognitive signals (hesitation, abandoned thoughts,
+and thought evolution) during coding.
+
+This project is published to establish prior art and
+encourage open exploration of developer cognition.
+
+---
+
 ## What Are Cognitive Traces in Programming?
 
 In programming, developers constantly make mental decisions:
-1. pausing before writing logic
-2. opening the same file repeatedly
-3. writing a comment, then deleting it
-4. revising an idea mid-sentence
+- pausing before writing logic
+- opening the same file repeatedly
+- writing a comment, then deleting it
+- revising an idea mid-sentence
 
 These actions represent developer cognition, but traditional tools like Git only track final output.
 A cognitive trace is a record of these invisible thinking signals.

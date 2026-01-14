@@ -1,8 +1,9 @@
 {
   "name": "cognitive-trace-recorder",
-  "displayName": "cognitive-trace-recorder",
-  "description": "Records how you think while coding",
+  "displayName": "Cognitive Trace Recorder",
+  "description": "A VS Code extension that records cognitive traces while coding, including pauses, file revisits, added and deleted comments, and thought evolution.",
   "version": "0.0.1",
+  "publisher": "jatin-cse",
   "engines": {
     "vscode": "^1.108.0"
   },
@@ -13,11 +14,15 @@
     "*"
   ],
   "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jatin-cse/cognitive-trace-recorder"
+  },
   "contributes": {
     "commands": [
       {
         "command": "cognitive-trace-recorder.helloWorld",
-        "title": "Hello World"
+        "title": "Cognitive Trace Recorder: Hello World"
       }
     ]
   },
@@ -33,9 +38,9 @@
     "@types/vscode": "^1.108.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.52.0",
-    "eslint": "^9.39.2",
     "typescript": "^5.9.3",
+    "eslint": "^9.39.2",
+    "typescript-eslint": "^8.52.0",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2"
   }

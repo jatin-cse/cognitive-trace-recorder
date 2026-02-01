@@ -15,7 +15,7 @@ This project is published to establish prior art and
 encourage open exploration of developer cognition.
 
 ---
-
+ 
 ## What Are Cognitive Traces in Programming?
 
 In programming, developers constantly make mental decisions:
